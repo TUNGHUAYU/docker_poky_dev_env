@@ -70,7 +70,7 @@ function FUNC_parse_argument(){
 FUNC_parse_argument $@
 
 if [[ $# != 1 ]];then
-	echo "usage $(basename $0) <project location>"
+	USAGE
 	exit 1
 fi
 
