@@ -27,7 +27,7 @@ $ bash run_container.sh ${POKY_DIR}
 
 please replacing the following content in `conf/local.conf`
 
-```tex
+```bash
 BB_SIGNATURE_HANDLER = "OEEquivHash"
 BB_HASHSERVE = "auto"
 BB_HASHSERVE_UPSTREAM = "hashserv.yocto.io:8687"
