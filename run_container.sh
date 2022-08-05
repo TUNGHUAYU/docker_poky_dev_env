@@ -45,11 +45,30 @@ function FUNC_check_image_existed(){
 
 }
 
+function USAGE(){
+	echo "usage $(basename $0) <project location>"
+}
+
+function FUNC_parse_argument(){
+	for arg in $@
+	do
+		case "${arg}" in
+			-h|--help)
+				USAGE
+				exit 0
+				;;
+		esac
+	done
+}
+
 ###
 # main
 ###
 
 # argument check
+
+FUNC_parse_argument $@
+
 if [[ $# != 1 ]];then
 	echo "usage $(basename $0) <project location>"
 	exit 1
